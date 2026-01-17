@@ -4,9 +4,13 @@ import {ScrollView, View, Text} from "react-native";
 
 export default function JobsScreen() {
   return (
-    <SafeAreaView edges={['top', 'right', 'left']} style={{ flex: 1 }}>
-      <TabsTopNav id={"jobs-screen"}/>
-      <ScrollView>
+    <SafeAreaView
+      edges={['top']}
+      style={{ flex: 1 }}
+    >
+      <TabsTopNav id="jobs-screen" />
+
+      <ScrollView contentContainerStyle={{ paddingHorizontal: 16 }}>
         <View>
           <Text>Feature coming soon</Text>
         </View>
@@ -14,3 +18,4 @@ export default function JobsScreen() {
     </SafeAreaView>
   );
 }
+
