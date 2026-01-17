@@ -31,9 +31,9 @@ export default function TabsLayout() {
               tabBarIcon: ({ color }) =>
                 <IconComponent
                   color={color}
-                  style={{marginTop: -5}}
+                  style={{marginTop: -1}}
                   strokeWidth={2.5}
-                  size={32}
+                  size={28}
                 />
             }}
           />
