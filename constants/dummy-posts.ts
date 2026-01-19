@@ -132,7 +132,7 @@ export const dummyPosts: PostInterface[] = [
       media: [
         {
           type: "image",
-          thumbnail: "https://picsum.photos/seed/tech1/800/600",
+          thumbnail: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop",
           alt: "Team celebrating product launch",
         },
       ],
@@ -228,7 +228,7 @@ export const dummyPosts: PostInterface[] = [
       media: [
         {
           type: "article",
-          thumbnail: "https://picsum.photos/seed/ux1/1200/630",
+          thumbnail: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop",
           alt: "Color psychology in UX design infographic",
         },
       ],
@@ -323,7 +323,7 @@ export const dummyPosts: PostInterface[] = [
       media: [
         {
           type: "image",
-          thumbnail: "https://picsum.photos/seed/marketing1/800/800",
+          thumbnail: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&h=600&fit=crop",
           alt: "Target audience funnel diagram",
         },
       ],
@@ -414,5 +414,198 @@ export const dummyPosts: PostInterface[] = [
       },
     ],
     createdAt: "2026-01-17T06:30:00Z",
+  },
+  {
+    id: "post_007",
+    type: "original",
+    author: users[6],
+    contents: {
+      text: "Hot take on remote work culture 🔥\n\nAfter 3 years of managing distributed teams, here's what actually matters:\n\n❌ Number of hours logged\n❌ Always being \"available\" on Slack\n❌ Mandatory video-on meetings\n\n✅ Clear communication\n✅ Results and outcomes\n✅ Trust and autonomy\n\nThe future of work isn't about where you work or when you work. It's about building a culture of trust and accountability.\n\nWhat's your biggest remote work challenge?",
+      hashtags: ["RemoteWork", "Leadership", "WorkCulture", "HRTech"],
+    },
+    visibility: "Public",
+    likesCount: 2341,
+    repostsCount: 456,
+    reactions: [
+      { type: "Support", user: users[0], createdAt: "2026-01-11T09:00:00Z" },
+      { type: "Insightful", user: users[2], createdAt: "2026-01-11T10:00:00Z" },
+      { type: "Like", user: users[4], createdAt: "2026-01-11T11:00:00Z" },
+    ],
+    comments: [
+      {
+        id: "comment_012",
+        author: users[2],
+        body: "This resonates so much! We switched to async-first communication and productivity actually went up 25%.",
+        likesCount: 38,
+        createdAt: "2026-01-11T12:00:00Z",
+        replies: [
+          {
+            id: "comment_012_reply_001",
+            author: users[6],
+            body: "Exactly! Async gives people time to think and respond thoughtfully instead of reactive chat responses.",
+            likesCount: 21,
+            createdAt: "2026-01-11T12:30:00Z",
+          },
+        ],
+      },
+      {
+        id: "comment_013",
+        author: users[3],
+        body: "The trust piece is crucial. Micromanaging remote teams is a recipe for disaster and high turnover.",
+        likesCount: 16,
+        createdAt: "2026-01-11T13:00:00Z",
+      },
+    ],
+    createdAt: "2026-01-11T08:00:00Z",
+  },
+  {
+    id: "post_008",
+    type: "original",
+    author: users[0],
+    contents: {
+      text: "Quick wins for better product meetings 🎯\n\nI used to dread our weekly product reviews. 2 hours of rambling discussions, no decisions made.\n\nThen we implemented these 5 rules:\n\n1. Max 30 minutes (use a timer!)\n2. Clear agenda sent 24h before\n3. Pre-read materials required\n4. Decision maker identified upfront\n5. Action items with owners before leaving\n\nResult? 75% shorter meetings, 3x more decisions shipped.\n\nYour time is your most valuable resource. Protect it fiercely.",
+      media: [
+        {
+          type: "image",
+          thumbnail: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&h=600&fit=crop",
+          alt: "Team meeting productivity tips",
+        },
+      ],
+      hashtags: ["Productivity", "ProductManagement", "Leadership", "Meetings"],
+    },
+    visibility: "Public",
+    likesCount: 1678,
+    repostsCount: 312,
+    reactions: [
+      { type: "Like", user: users[1], createdAt: "2026-01-10T14:00:00Z" },
+      { type: "Insightful", user: users[5], createdAt: "2026-01-10T15:00:00Z" },
+      { type: "Celebrate", user: users[6], createdAt: "2026-01-10T16:00:00Z" },
+    ],
+    comments: [
+      {
+        id: "comment_014",
+        author: users[4],
+        body: "The pre-read materials rule is a game changer! We implemented this last month and meetings actually start on time now.",
+        likesCount: 24,
+        createdAt: "2026-01-10T17:00:00Z",
+      },
+      {
+        id: "comment_015",
+        author: users[1],
+        body: "How do you handle stakeholders who still want to have 'just a quick chat' that turns into 45 minutes?",
+        likesCount: 11,
+        createdAt: "2026-01-10T17:30:00Z",
+        replies: [
+          {
+            id: "comment_015_reply_001",
+            author: users[0],
+            body: "I politely redirect: 'Let's schedule a proper 30-min sync to discuss this properly.' Setting boundaries is key!",
+            likesCount: 19,
+            createdAt: "2026-01-10T18:00:00Z",
+          },
+        ],
+      },
+    ],
+    createdAt: "2026-01-10T13:30:00Z",
+  },
+  {
+    id: "post_009",
+    type: "article",
+    author: users[5],
+    contents: {
+      text: "New research published! 📊\n\n\"Predicting User Behavior with Graph Neural Networks: A Practical Guide\"\n\nWe analyzed 10M+ user interactions across 50 different platforms and built a GNN model that outperforms traditional approaches by 34%.\n\nKey findings:\n• Social connections matter more than we thought (47% accuracy boost)\n• Temporal patterns reveal intent better than static features\n• Small graphs (100-1000 nodes) train 10x faster with similar accuracy\n\nFull paper linked in comments. Would love feedback from the ML community!",
+      media: [
+        {
+          type: "article",
+          thumbnail: "https://images.unsplash.com/photo-1509228627152-72ae9ae6848d?w=1200&h=630&fit=crop",
+          alt: "Graph Neural Networks research visualization",
+        },
+      ],
+      hashtags: ["MachineLearning", "GraphNeuralNetworks", "Research", "AI"],
+    },
+    visibility: "Public",
+    likesCount: 892,
+    repostsCount: 167,
+    reactions: [
+      { type: "Insightful", user: users[1], createdAt: "2026-01-09T10:00:00Z" },
+      { type: "Like", user: users[2], createdAt: "2026-01-09T11:00:00Z" },
+      { type: "Celebrate", user: users[0], createdAt: "2026-01-09T12:00:00Z" },
+    ],
+    comments: [
+      {
+        id: "comment_016",
+        author: users[1],
+        body: "Fascinating work David! Did you experiment with attention mechanisms in your GNN architecture?",
+        likesCount: 15,
+        createdAt: "2026-01-09T13:00:00Z",
+        replies: [
+          {
+            id: "comment_016_reply_001",
+            author: users[5],
+            body: "Yes! Graph attention networks showed promise but added significant compute overhead. Ended up using simpler GCN for production.",
+            likesCount: 12,
+            createdAt: "2026-01-09T13:45:00Z",
+          },
+        ],
+      },
+    ],
+    createdAt: "2026-01-09T09:15:00Z",
+  },
+  {
+    id: "post_010",
+    type: "original",
+    author: users[2],
+    contents: {
+      text: "Design systems aren't just about components 🎨\n\nAfter building design systems for 3 different companies, here's what I learned:\n\nA great design system is:\n• 20% component library\n• 30% documentation\n• 50% culture and collaboration\n\nYou can have the best Figma file and React components, but if designers and developers don't trust each other, it won't work.\n\nInvest in:\n✓ Regular design reviews\n✓ Shared Slack channels\n✓ Pairing sessions\n✓ Contribution guidelines that welcome everyone\n\nThe best design systems are built by teams, not individuals.\n\nWhat's your design system secret sauce?",
+      media: [
+        {
+          type: "image",
+          thumbnail: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&h=800&fit=crop",
+          alt: "Design system collaboration diagram",
+        },
+      ],
+      hashtags: ["DesignSystems", "UXDesign", "Collaboration", "DesignOps"],
+    },
+    visibility: "Public",
+    likesCount: 2134,
+    repostsCount: 398,
+    reactions: [
+      { type: "Love", user: users[0], createdAt: "2026-01-08T08:00:00Z" },
+      { type: "Insightful", user: users[4], createdAt: "2026-01-08T09:00:00Z" },
+      { type: "Support", user: users[1], createdAt: "2026-01-08T10:00:00Z" },
+    ],
+    comments: [
+      {
+        id: "comment_017",
+        author: users[0],
+        body: "This is SO true! We wasted 6 months building components nobody used because we didn't involve developers early.",
+        likesCount: 42,
+        createdAt: "2026-01-08T11:00:00Z",
+        replies: [
+          {
+            id: "comment_017_reply_001",
+            author: users[2],
+            body: "Exactly! Early collaboration is everything. We now do weekly syncs between design and eng from day one.",
+            likesCount: 28,
+            createdAt: "2026-01-08T11:30:00Z",
+          },
+        ],
+      },
+      {
+        id: "comment_018",
+        author: users[1],
+        body: "The documentation part is underrated. Our design system adoption 3x'd after we added code examples and usage guidelines.",
+        likesCount: 23,
+        createdAt: "2026-01-08T12:00:00Z",
+      },
+      {
+        id: "comment_019",
+        author: users[4],
+        body: "Love the culture emphasis! We created a 'design system champions' program where volunteers help spread adoption.",
+        likesCount: 17,
+        createdAt: "2026-01-08T13:00:00Z",
+      },
+    ],
+    createdAt: "2026-01-08T07:30:00Z",
   },
 ];
