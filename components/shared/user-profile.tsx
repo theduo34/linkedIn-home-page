@@ -1,9 +1,11 @@
-import {View} from 'react-native';
+import {Image} from "expo-image";
 
 export function UserProfile () {
   return(
-    <View className={"items-center w-10 h-10 bg-neutral-400 rounded-full"}>
-
-    </View>
+    <Image
+      source={{ uri: "https://i.pravatar.cc/150?img=2" }}
+      className="h-10 w-10 rounded-full"
+      contentFit="cover"
+    />
   )
 }
