@@ -1,7 +1,7 @@
 import { PostInterface } from "@/constants/dummy-posts";
-import { Pressable, View, Text } from "react-native";
+import { Pressable, View, Text , Image } from "react-native";
 import { Ellipsis, Globe, Heart, MessageCircle, Repeat2, Send, ThumbsUp, UserPlus, X } from "lucide-react-native";
-import { Image } from "expo-image";
+// import { Image } from "expo-image";
 import { formatDistanceToNow } from "date-fns";
 import React, { useState } from "react";
 
@@ -45,16 +45,16 @@ export const PostCard = ({ post }: { post: PostInterface }) => {
           <Image
             source={{ uri: post.author?.profilePicture }}
             className="h-10 w-10 rounded-full"
-            contentFit="cover"
+            //contentFit="cover"
           />
 
           <View className="flex-col flex-1">
             <View className="flex-row items-center gap-1">
-              <Text className="font-bold text-neutral-800" style={{ lineHeight: 18 }}>
+              <Text className="font-bold text-neutral-800" style={{ lineHeight: 16 }}>
                 {post.author.firstName} {post.author.lastName} {post.author?.additionalName}
               </Text>
               <View className="bg-neutral-600 w-1 h-1 rounded-full" />
-              <Text className="text-xs text-neutral-500" style={{ lineHeight: 18 }}>
+              <Text className="text-xs text-neutral-500" style={{ lineHeight: 16 }}>
                 {post.author.isFollowing ? "Following" : `${post.author.connectionDegree}`}
               </Text>
             </View>
@@ -62,13 +62,13 @@ export const PostCard = ({ post }: { post: PostInterface }) => {
             <Text
               className="text-sm text-neutral-500"
               numberOfLines={1}
-              style={{ lineHeight: 16, marginTop: 2 }}
+              style={{ lineHeight: 14, marginTop: 1 }}
             >
               {post.author.headlines}
             </Text>
 
-            <View className="flex-row items-center gap-1" style={{ marginTop: 2 }}>
-              <Text className="text-xs text-neutral-400" style={{ lineHeight: 14 }}>
+            <View className="flex-row items-center gap-1" style={{ marginTop: 1 }}>
+              <Text className="text-xs text-neutral-400" style={{ lineHeight: 12 }}>
                 {formatDistanceToNow(new Date(post.createdAt), { addSuffix: true })}
               </Text>
               <View className="bg-neutral-400 w-1 h-1 rounded-full" />
@@ -101,13 +101,13 @@ export const PostCard = ({ post }: { post: PostInterface }) => {
       {/* Post Content */}
       <View className="flex-col">
         <View className="px-4">
-          <Text className="text-sm text-neutral-800" numberOfLines={isExpanded ? undefined : MAX_LINES}>
+          <Text className="text-neutral-800" numberOfLines={isExpanded ? undefined : MAX_LINES}>
             {post.contents.text}
           </Text>
 
           {shouldTruncate && (
             <Pressable onPress={() => setIsExpanded(!isExpanded)}>
-              <Text className="text-sm font-semibold mt-1" style={{ color: "#0a66c2" }}>
+              <Text className="font-semibold mt-1" style={{ color: "#0a66c2" }}>
                 ...{isExpanded ? "Show less" : "see more"}
               </Text>
             </Pressable>
@@ -122,7 +122,7 @@ export const PostCard = ({ post }: { post: PostInterface }) => {
                   <Image
                     source={{ uri: media.thumbnail }}
                     className="w-full h-96"
-                    contentFit="cover"
+                   // contentFit="cover"
                   />
                 )}
 
@@ -131,7 +131,7 @@ export const PostCard = ({ post }: { post: PostInterface }) => {
                     <Image
                       source={{ uri: media.thumbnail }}
                       className="w-full h-96"
-                      contentFit="cover"
+                     // contentFit="cover"
                     />
                     <View className="absolute inset-0 items-center justify-center">
                       <View className="w-16 h-16 rounded-full bg-white/90 items-center justify-center">
@@ -156,7 +156,8 @@ export const PostCard = ({ post }: { post: PostInterface }) => {
 
                 {media.type === "article" && media.thumbnail && (
                   <Pressable>
-                    <Image source={{ uri: media.thumbnail }} className="w-full h-48" contentFit="cover" />
+                    <Image source={{ uri: media.thumbnail }} className="w-full h-48" //contentFit="cover"
+                     />
                     <View className="absolute bottom-0 left-0 right-0 p-3 bg-black/60">
                       <Text className="text-white font-semibold">{media.alt || "Read article"}</Text>
                     </View>
@@ -176,23 +177,23 @@ export const PostCard = ({ post }: { post: PostInterface }) => {
               <View className="w-5 h-5 rounded-full bg-blue-600 border-2 border-white items-center justify-center">
                 <ThumbsUp size={10} color="white" />
               </View>
-              <View className="w-5 h-5 rounded-full bg-green-600 border-2 border-white -ml-1 items-center justify-center">
+              <View className="w-5 h-5 rounded-full bg-green-600 border-2 border-white -ml-1 items-center justify-center mx-auto">
                 <Text className="text-white text-xs">👏</Text>
               </View>
               <View className="w-5 h-5 rounded-full bg-red-600 border-2 border-white -ml-1 items-center justify-center">
                 <Heart size={10} color="white" fill="white" />
               </View>
             </View>
-            <Text className="ml-2 text-xs text-neutral-600">
+            <Text className="ml-2 text-sm text-neutral-600">
               {post.likesCount.toLocaleString()}
             </Text>
           </View>
 
           <View className="flex-row items-center gap-3">
-            <Text className="text-xs text-neutral-600">
+            <Text className="text-sm text-neutral-600">
               {post.comments?.length || 0} comments
             </Text>
-            <Text className="text-xs text-neutral-600">
+            <Text className="text-sm text-neutral-600">
               {post.repostsCount} reposts
             </Text>
           </View>

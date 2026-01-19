@@ -17,7 +17,7 @@ export default function TabsLayout() {
         tabBarActiveTintColor: 'black',
         headerShown: false,
         animation: 'shift',
-        tabBarLabelStyle: { marginTop: 5 },
+        tabBarLabelStyle: { marginTop: 2 },
       }}
     >
       {TABS.map((tab, index) => {
@@ -31,7 +31,7 @@ export default function TabsLayout() {
               tabBarIcon: ({ color }) =>
                 <IconComponent
                   color={color}
-                  style={{marginTop: -1}}
+                  style={{marginTop: -2}}
                   strokeWidth={2.5}
                   size={28}
                 />
